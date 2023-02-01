@@ -12,8 +12,8 @@ final class CustomerFactory
     {
         $customer = new Customer();
 
-        $customer->setName(new Name($name));
-        $customer->setCreditLimit(new CreditLimit(0));
+        $customer->setName(Name::from($name));
+        $customer->setCreditLimit(CreditLimit::from(0));
         $customer->setStatus(StatusEnum::from('pending'));
 
         return $customer;

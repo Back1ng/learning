@@ -8,6 +8,11 @@ final class Name implements \Stringable
         private readonly string $name,
     ) {}
 
+    public static function from(string $name): self
+    {
+        return new self($name);
+    }
+
     public function getValue(): string
     {
         return $this->name;
